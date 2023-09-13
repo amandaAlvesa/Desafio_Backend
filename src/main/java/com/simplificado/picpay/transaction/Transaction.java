@@ -1,7 +1,6 @@
 package com.simplificado.picpay.transaction;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import com.simplificado.picpay.user.User;
