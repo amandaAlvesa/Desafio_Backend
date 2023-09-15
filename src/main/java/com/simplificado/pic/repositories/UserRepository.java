@@ -1,10 +1,10 @@
-package com.simplificado.picpay.repositories;
+package com.simplificado.pic.repositories;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.simplificado.picpay.user.User;
+import com.simplificado.pic.user.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 	Optional<User> findUserByDocument(String document);

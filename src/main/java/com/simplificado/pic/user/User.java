@@ -1,8 +1,9 @@
-package com.simplificado.picpay.user;
+package com.simplificado.pic.user;
 
 import java.math.BigDecimal;
 
-import com.simplificado.picpay.domain.UserType;
+import com.simplificado.pic.domain.UserType;
+import com.simplificado.pic.dto.UserDto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,6 +16,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity(name="users")
@@ -22,6 +24,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of="id")
 public class User {
 
@@ -38,4 +41,14 @@ public class User {
 	
 	@Enumerated(EnumType.STRING)
 	private UserType userType;
+	
+	public User (UserDto data) {
+		this.email = data.email();
+		this.balance = data.balance();
+		this.userType = data.userType();
+		this.lastName = data.lastName();
+		this.document = data.document();
+		this.password = data.password();
+		this.firstName = data.firstName();
+	}
 }

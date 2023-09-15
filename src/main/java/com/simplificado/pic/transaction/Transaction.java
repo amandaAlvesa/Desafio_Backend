@@ -1,9 +1,9 @@
-package com.simplificado.picpay.transaction;
+package com.simplificado.pic.transaction;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.simplificado.picpay.user.User;
+import com.simplificado.pic.user.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,6 +15,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity(name = "transactions")
@@ -22,6 +23,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of="id")
 public class Transaction {
 
